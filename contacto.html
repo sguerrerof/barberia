@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <style>
+            body{
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            header{
+                background: #BBBBBB;
+                padding: 20px 0;
+            }
+
+            .caja{
+                width: 940px;
+                position: relative;
+                margin: 0 auto;
+            }
+
+            nav{
+                position: absolute;
+                top: 110px;
+                right: 0px;
+            }
+
+            nav li{
+                display: inline;
+                margin: 0 0 0 15px;
+            }
+
+            nav a{
+                text-transform: uppercase;
+                color: black;
+                font-weight: bold;
+                font-size: 22px;
+                text-decoration: none;
+            }
+
+            nav a:hover{
+                color: #c78c19;
+            }
+
+            main{
+                width: 940px;
+                position: relative;
+                margin: 0 auto;
+            }
+
+            form{
+                margin: 40px 0;
+            }
+
+            form label, form legend{
+                display: block;
+                font-size: 20px;
+                margin: 0 0 10px;
+
+            }
+
+            .inputPadron{
+                display: block;
+                margin: 0 0 20px;
+                padding: 10px 25px;
+                width: 50%;
+            }
+
+            .checkbox{
+                margin: 20px 0;;
+            }
+
+            .enviar{
+                width: 40%;
+                padding: 15px 0;
+                font-size: 18px;
+                font-weight: bold;
+                color: #FFFFFF;
+                background: orange;
+                border: none;
+                border-radius: 5px;
+                transition: 0.2s all;
+                cursor: pointer;
+            }
+
+            .enviar:hover{
+                background: red;
+                transform: scale(1.05);
+            }
+
+            table{
+                margin: 40px;
+            }
+
+            thead{
+                background: #555555;
+                color: white;
+                font-weight: bold;
+            }
+
+            td,th{
+                border: 1px solid #000000;
+                padding: 8px 15px;
+            }
+
+            footer{
+                text-align: center;
+                background: url(img/bg.jpg);
+                padding: 40px;
+            }
+
+            .copy{
+                color: #FFFFFF;
+                font-size: 13px;
+                margin: 20px;
+            }
+            @media screen and (max-width: 600px){
+                h1{
+                    text-align: center;
+                }
+
+                nav{
+                    position: static;
+                    text-align: center;
+                }
+
+                main, .caja{
+                    width: auto;
+                }
+                
+                form{
+                    margin-left: 20px;
+                }
+
+                .enviar{
+                    width: 60%;
+                }
+            }
+
+            @media screen and (min-width: 700px){
+                .caja{
+                    margin-right: 15px;
+                }
+                
+                main, .caja{
+                    width: auto;
+                }
+                
+                form{
+                    margin-left: 20px;
+                }
+            }
+
+        </style>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <header>
+        <div class="caja">
+            <h1><img src="img/logo.png" alt="Logo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>            
+    </header>
+    <main>
+        <form>
+            <label for="nombreApellido">Nombre y apellido</label>
+            <input type="text" id="nombreApellido" class="inputPadron" required>
+
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" class="inputPadron" required placeholder="example@dominio.com">
+
+            <label for="tel">Teléfono</label>
+            <input type="tel" id="tel" class="inputPadron" required placeholder="(+XX)(XXX)(XXXXXXX)">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea cols="70" rows="10" id="mensaje" class="inputPadron" required></textarea>
+
+            <fieldset>
+                <legend>¿Como le gustaria que lo contactemos?</legend>
+
+                <label for="radioEmail"><input type="radio" name="contacto" value="email" id="radioEmail">Email</label>
+                
+                <label for="radioTel"><input type="radio" name="contacto" value="tel" id="radioTel">Telefono</label>
+                
+                <label for="radioWA"><input type="radio" name="contacto" value="WA" id="radioWA" checked>WhatsApp</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>¿En cual horario prefiere ser atendido?</legend>
+                <select>
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+            </fieldset>
+            
+            <label class="checkbox"><input type="checkbox" checked>¿Le gustaria recibir novedades de la Barbería Alura?</label>
+            
+            <input type="submit" value="Enviar formulario" class="enviar">
+
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>08h - 20h</td>
+                </tr>
+                <tr>
+                    <td>Miercoles</td>
+                    <td>08h - 20h</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>08h - 20h</td>
+                </tr>
+            </tbody>            
+        </table>
+
+    </main>
+    <footer>
+        <img src="img/logo-blanco.png" alt="Logo">
+        <p class="copy">&copy Copyright Barbería Alura - 2020</p>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Productos - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css">
+
+        <style>
+            body{
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            header{
+                background: #BBBBBB;
+                padding: 20px 0;
+            }
+
+            .caja{
+                width: 940px;
+                position: relative;
+                margin: 0 auto;
+            }
+
+            nav{
+                position: absolute;
+                top: 110px;
+                right: 0px;
+            }
+
+            nav li{
+                display: inline;
+                margin: 0 0 0 15px;
+            }
+
+            nav a{
+                text-transform: uppercase;
+                color: black;
+                font-weight: bold;
+                font-size: 22px;
+                text-decoration: none;
+            }
+
+            nav a:hover{
+                color: #c78c19;
+            }
+
+            .productos{
+                width: 940px;
+                margin: 0 auto;
+                padding: 50px;
+            }
+
+            .productos li{
+                display: inline-block;
+                text-align: center;
+                width: 30%;
+                vertical-align: top;
+                margin: 0 1.5%;
+                padding: 30px 20px;
+                box-sizing: border-box;
+                border: 2px solid #000000;
+                border-radius: 10px;
+            }
+
+            .productos li:hover{
+                border-color: #c78c19;
+            }
+
+            .productos li:active{
+                border-color:green;
+            }
+
+            .productos h2{
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .productos li:hover h2{
+                font-size: 33px;
+            }
+
+            .productoDescrip{
+                font-size: 18px;
+            }
+
+            .precio{
+                font-size: 30px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            footer{
+                text-align: center;
+                background: url(img/bg.jpg);
+                padding: 40px;
+            }
+
+            .copy{
+                color: #FFFFFF;
+                font-size: 13px;
+                margin: 20px;
+            }
+
+            @media screen and (max-width: 600px){
+                h1{
+                    text-align: center;
+                }
+
+                nav{
+                    position: static;
+                    text-align: center;
+                }
+
+                main, .caja, .productos{
+                    width: auto;
+                }
+
+                .productos{
+                    text-align: center;
+                    display: grid;
+                    padding: 30px;
+                }
+
+                .productos li{
+                    text-align: center;
+                    width: 100%;
+                    margin: 20px 0;
+                    padding: 0;
+                }
+            }
+
+            @media screen and (min-width: 700px){
+                .caja{
+                    margin-right: 15px;
+                }
+
+                main, .caja, .productos{
+                    width: auto;
+                }
+
+                .productos{
+                    text-align: center;
+                    padding: 40px 0 40px 0;
+                }
+
+                .productos li img{
+                    width: 100%;
+                }
+
+                .productos li{
+                    width: 30%;
+                    margin-top: 20px;
+                    margin: 5px;
+                    padding: 15px;
+                }
+            }
+
+        </style>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="img/logo.png"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>            
+        </header>
+
+        <main>
+            <ul class="productos">
+                <li>
+                    <h2>Cabello</h2>
+                    <img src="img/cabello.jpg">
+                    <p class="productoDescrip">Con tijera o máquina, a gusto del cliente</p>
+                    <p class="precio">$10.00</p>
+                </li>
+                <li>
+                    <h2>Barba</h2>
+                    <img src="img/barba.jpg">
+                    <p class="productoDescrip">Corte y diseño profecional de barba</p>
+                    <p class="precio">$08.00</p>
+                </li>
+                <li>
+                    <h2>Cabello + Barba</h2>
+                    <img src="img/cabello+barba.jpg">
+                    <p class="productoDescrip">Paquete completo de cabello y baraba</p>
+                    <p class="precio">$15.00</p>
+                </li>
+                
+            </ul>
+        </main>
+
+        <footer>
+            <img src="img/logo-blanco.png">
+            <p class="copy">&copy Copyright Barbería Alura - 2020</p>
+        </footer>
+    </body>
+</html>
